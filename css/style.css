@@ -1,0 +1,58 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Scrollable Cards */
+.scrolling-wrapper {
+  scrollbar-width: none; /* hides scrollbar */
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none; /* hides scrollbar for Chrome */
+}
+
+.card {
+  min-width: 180px;
+  border: none;
+  border-radius: 12px;
+}
+
+.card h6 {
+  color: #198754;
+}
+
+.card small {
+  font-weight: 600;
+}
+
+/* Category Section */
+.category-item {
+  width: 90px;
+}
+
+.category-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffc107;
+  padding: 5px;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.category-icon:hover {
+  transform: scale(1.1);
+}
+
+.category-item p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #212529;
+}
+
+/* Footer */
+footer {
+  font-size: 14px;
+}
