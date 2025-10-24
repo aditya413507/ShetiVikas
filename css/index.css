@@ -1,0 +1,38 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #fff, #f0fff4);
+}
+
+.lang-card {
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.lang-option {
+  border: none !important;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 12px 15px;
+  transition: all 0.2s ease;
+}
+
+.lang-option:last-child {
+  border-bottom: none;
+}
+
+.lang-option:hover {
+  background-color: #f8fdf9;
+}
+
+.form-check-input {
+  accent-color: #198754;
+}
+
+.active-lang {
+  background-color: #e8f5e9;
+  border-radius: 12px;
+}
+
+.btn-success {
+  border-radius: 12px;
+  font-weight: 600;
+}
