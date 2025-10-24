@@ -15,5 +15,5 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
   }
 
   // Redirect to home.html after successful login
-  window.location.href = "home.html";
+  window.location.href = "auth/home.html";
 });
