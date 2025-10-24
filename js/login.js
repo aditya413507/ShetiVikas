@@ -1,19 +1,49 @@
-document.getElementById("loginForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | AgroMarket</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-  const mobile = document.getElementById("mobile").value;
-  const otp = document.getElementById("otp").value;
+<body class="bg-light">
+  <nav class="navbar navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">AgroMarket</a>
+    </div>
+  </nav>
 
-  if (!/^\d{10}$/.test(mobile)) {
-    alert("Enter a valid 10-digit mobile number");
-    return;
-  }
+  <section class="container d-flex flex-column justify-content-center align-items-center min-vh-100">
+    <div class="card p-4 shadow border-0" style="max-width: 400px; width: 100%;">
+      <h5 class="fw-bold text-center mb-4">Login to Continue</h5>
+      <form id="loginForm">
+        <div class="mb-3">
+          <label class="form-label">Mobile Number</label>
+          <input type="tel" class="form-control" id="mobile" placeholder="Enter your mobile number" required pattern="[0-9]{10}">
+          <div class="invalid-feedback">Please enter a valid 10-digit number</div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">OTP</label>
+          <input type="text" class="form-control" id="otp" placeholder="Enter OTP">
+        </div>
+        <button type="submit" class="btn btn-success w-100 mb-3">Login</button>
 
-  if (otp.trim() === "") {
-    alert("Enter OTP");
-    return;
-  }
+        <!-- Register Option -->
+        <div class="text-center">
+          <p class="mb-1">Don’t have an account?</p>
+          <a href="register.html" class="btn btn-outline-success w-100">Register as New User</a>
+        </div>
+      </form>
+    </div>
+  </section>
 
-  // Redirect to home.html after successful login
-  window.location.href = "home.html";
-});
+  <footer class="bg-success text-white text-center py-3">
+    <p class="mb-0">© 2025 AgroMarket. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
