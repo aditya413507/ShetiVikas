@@ -8,5 +8,5 @@ document.querySelectorAll('input[name="language"]').forEach(radio => {
 
 // Continue button → go to login page
 document.getElementById('continue-btn').addEventListener('click', () => {
-  window.location.href = 'auth/login.html';
+  window.location.href = 'login.html';
 });
