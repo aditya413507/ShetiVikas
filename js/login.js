@@ -1,19 +1,28 @@
-document.getElementById("loginForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.getElementById("loginForm");
 
-  const mobile = document.getElementById("mobile").value;
-  const otp = document.getElementById("otp").value;
+  if (!loginForm) return;
 
-  if (!/^\d{10}$/.test(mobile)) {
-    alert("Enter a valid 10-digit mobile number");
-    return;
-  }
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  if (otp.trim() === "") {
-    alert("Enter OTP");
-    return;
-  }
+    const mobile = document.getElementById("mobile").value.trim();
+    const otp = document.getElementById("otp").value.trim();
 
-  // Redirect to home.html after successful login
-  window.location.href = "auth/home.html";
+    // ✅ Validate mobile
+    if (!/^\d{10}$/.test(mobile)) {
+      alert("Please enter a valid 10-digit mobile number.");
+      return;
+    }
+
+    // ✅ Validate OTP (can be anything non-empty for now)
+    if (otp === "") {
+      alert("Please enter the OTP.");
+      return;
+    }
+
+    // ✅ Simulate success and redirect
+    alert("Login successful!");
+    window.location.href = "home.html";
+  });
 });
