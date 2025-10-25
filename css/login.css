@@ -1,0 +1,8 @@
+/* Login Modal Styling */
+.modal-content {
+  border-radius: 20px;
+}
+
+#togglePassword {
+  border-radius: 0 8px 8px 0;
+}
