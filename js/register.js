@@ -84,7 +84,15 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
   }
 
   console.log("Form Submitted:", formData);
-  alert("Registration successful!");
+
+  alert("Registration successful! Redirecting to login page...");
+
+  // ✅ Redirect to login.html after 1.5 seconds
+  setTimeout(() => {
+    window.location.href = "login.html";
+  }, 1500);
+
+  // Optional: reset form fields
   this.reset();
   districtSelect.innerHTML = '<option value="">Select District</option>';
   talukaSelect.innerHTML = '<option value="">Select Taluka</option>';
